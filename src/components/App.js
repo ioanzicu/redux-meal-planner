@@ -26,7 +26,7 @@ function mapStateToProps (calendar) {
         meals[meal] = calendar[day][meal]
           ? calendar[day][meal]
           : null
-
+      
         return meals
       }, {})
     }))
