@@ -62,10 +62,17 @@ class App extends Component {
     }, [])
     .reduce((ings, { ingredientLines }) => ings.concat(ingredientLines), [])
   }
+
   render() {
     const { foodModalOpen, loadingFood, food, ingredientsModalOpen } = this.state
     const { calendar, remove, selectRecipe } = this.props
     const mealOrder = ['breakfast', 'lunch', 'dinner']
+
+    function getCurrentYear() {
+      let d = new Date()
+      return d.getFullYear()
+    }
+
 
     return (
       <div className='container'>
@@ -77,6 +84,8 @@ class App extends Component {
               Shopping List
           </button>
         </div>
+
+        <hr/>
 
         <ul className='meal-types'>
           {mealOrder.map((mealType) => (
@@ -160,6 +169,10 @@ class App extends Component {
         >
           {ingredientsModalOpen && <ShoppingList list={this.generateShoppingList()}/>}
         </Modal>
+
+        <hr/>
+
+        <p>All rights reserved &#169; {getCurrentYear()}.</p>
       </div>
     );
   }
