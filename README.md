@@ -1,3 +1,5 @@
+This project was created in the process of study Redux and Redux with React JS.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
